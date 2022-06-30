@@ -1,0 +1,124 @@
+{
+  "Posts": [
+    {
+      "id": 1,
+      "name": "Sumithra @Rock",
+      "profile": "https://www.imagediamond.com/blog/wp-content/uploads/2019/07/Girls-whatsapp-Dp-123-1024x1024.jpg",
+      "desc": "Amazing Places",
+      "img": "https://techbeasts.com/wp-content/uploads/2016/12/Wonderful_Nature_Look_of_Mountain_HD_Photos.jpg",
+      "like": 2,
+      "Comment": 4,
+      "backImage": "https://wallpaperaccess.com/full/1672438.jpg",
+      "Info": [
+        {
+          "desc": "I love my self @@$$",
+          "DOF": "21:05:199",
+          "Native": "COimbatore",
+          "interest": "Cooking,Sigging,Danching"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "profile": "https://1.bp.blogspot.com/-ussdmBPJN00/X3f2xUi8v9I/AAAAAAAAAsE/pfqSHD88MrEBJaSlVRWdmN-vswQOp8C6wCLcBGAsYHQ/s1286/beautiful%2Bgirls.jpg",
+      "name": "Nithya Sri",
+      "desc": "KovaiKutralam",
+      "img": "https://images.newindianexpress.com/uploads/user/imagelibrary/2012/5/16/17/w600X390/16sep_tree.jpg",
+      "like": 2,
+      "Comment": 4,
+      "backImage": "https://www.designyourway.net/blog/wp-content/uploads/2019/02/aesthetic-wallpaper-1.jpg"
+    },
+    {
+      "id": 3,
+      "profile": "https://lh3.googleusercontent.com/nSdpP00-9CMDGeAZ_5nUo3Mb-Fb2oU34OK5yHIPZg2Jy6bEt1wdLa_xjuoOJLtvAhAov",
+      "name": "Kaviya",
+      "desc": "Visit Esa Yoga maiya at coimbatore",
+      "img": "https://images.sadhguru.org/sites/default/files/inline-images/guru-purnima-images-celebrations-isha-yoga-center.jpg",
+      "like": 2,
+      "Comment": 4,
+      "backImage": "https://cdn.shopify.com/s/files/1/0066/4574/3686/files/Abstract_LinkedIn_Background.png?v=1627912075"
+    },
+    {
+      "desc": "LOT KRISHNA",
+      "img": "blob:http://localhost:3000/9dd5da18-5d65-485b-88ee-f63eb1427576",
+      "id": 4
+    },
+    {
+      "desc": "LOT KRISHNA",
+      "img": "blob:http://localhost:3000/9dd5da18-5d65-485b-88ee-f63eb1427576",
+      "id": 5
+    },
+    {
+      "desc": "LOT KRISHNA",
+      "img": "blob:http://localhost:3000/9dd5da18-5d65-485b-88ee-f63eb1427576",
+      "id": 6
+    },
+    {
+      "desc": "",
+      "img": "blob:http://localhost:3000/b4fe48e1-f254-401a-8265-b523447b3efd",
+      "video": null,
+      "id": 7
+    },
+    {
+      "desc": "",
+      "img": "blob:http://localhost:3000/90e18343-ca4c-4ece-9039-827ec8d7ed62",
+      "video": null,
+      "id": 8
+    },
+    {
+      "desc": "",
+      "img": "blob:http://localhost:3000/9cf4c221-30a2-416a-8839-fe5f03bc16d6",
+      "video": null,
+      "id": 9
+    },
+    {
+      "desc": "",
+      "img": "blob:http://localhost:3000/77ec1c78-75e3-41d2-8c35-80d8f0a43fb1",
+      "video": null,
+      "id": 10
+    },
+    {
+      "desc": "",
+      "img": "blob:http://localhost:3000/014fd749-35bc-4832-a211-f297c4f114e0",
+      "video": null,
+      "id": 11
+    }
+  ],
+  "Friends": [
+    {
+      "id": 1,
+      "profilePicture": "https://i.pinimg.com/564x/63/f7/e9/63f7e99d2bdb21c005ce2debca4c3a9e.jpg",
+      "username": "Nithya"
+    },
+    {
+      "id": 2,
+      "profilePicture": "https://hindify.org/wp-content/uploads/2022/03/girls-dp54.jpg",
+      "username": "Deepika"
+    },
+    {
+      "id": 3,
+      "profilePicture": "https://www.whatsappimages.in/wp-content/uploads/2020/05/Boys-Profile-Images-45.jpg",
+      "username": "Vimal"
+    },
+    {
+      "id": 4,
+      "profilePicture": "https://images.statusfacebook.com/profile_pictures/stylish-boys/boys-profile-pics-344.jpg",
+      "username": "Vicky"
+    },
+    {
+      "id": 5,
+      "profilePicture": "http://www.goodmorningimagesdownload.com/wp-content/uploads/2019/10/Boys-Girls-Profile-Whatsapp-DP-11-1.jpg",
+      "username": "John"
+    }
+  ],
+  "Regsister": [
+    {
+      "FirstName": "Sumi",
+      "LastName": "R",
+      "Email": "abc@gmail.com",
+      "Password": "1234",
+      "ConfirmPassword": "1234",
+      "id": 1
+    }
+  ]
+}

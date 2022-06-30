@@ -1,0 +1,39 @@
+.SettingContainer{
+ 
+    height: calc(100vh-50px);
+   
+}
+.SettingCollection{
+    padding:20px;
+   
+}
+.SettingList{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+.SettingListType{
+ display:flex;
+ align-items: center;
+ margin-bottom:20px;
+}
+.SettingIcon{
+    margin-right:15px;
+
+}
+ .SettingButton{
+   width: 150px;
+   border: none;
+   padding:10px;
+   border-radius: 5px;
+   font-weight: 500;
+
+} 
+.SettingHr{
+    margin:20px 0;
+}
+.Icon{
+    padding:0;
+    margin:0;
+    list-style: none; 
+}

@@ -1,0 +1,99 @@
+.NavBarContainer {
+  height: 50px;
+  width: 100%;
+  background-color:black;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.NavBarSide {
+  flex: 3;
+}
+.logo {
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.NavBarCenter {
+  flex: 5;
+  background-color: white;
+  border-radius:10px;
+}
+.SearchBar {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  
+}
+.navBarSearch {
+  font-size: 20px !important;
+  margin-left: 10px;
+  color:black;
+}
+.Input {
+  border: none;
+  width: 70%;
+  height: 30px;
+}
+.Input:focus {
+  outline: none;
+}
+.NavBarLeft {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.NavbarLink {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color:white;
+}
+.topbarIcons {
+  display: flex;
+}
+.NavBarIcon {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.NavBarItemList {
+  display: flex;
+}
+.NavBarItem {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.NavBarImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.Icon{
+  color:white;
+  padding-top:10px;
+}
+.link{
+  text-decoration:none ;
+  color: white;
+}

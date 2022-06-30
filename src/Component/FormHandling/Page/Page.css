@@ -1,0 +1,10 @@
+.post-container{
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    max-width: 60%;
+}
