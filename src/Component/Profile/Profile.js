@@ -5,10 +5,7 @@ import { useParams } from "react-router-dom";
 import { MoreVert } from "@material-ui/icons";
 import { useNavigate } from "react-router-dom";
 import Friend from "./Friend/Friend";
-import axios from 'axios'
 import "./profile.css";
-
-
 
 const Profile = () => {
   //Dispatch
@@ -17,10 +14,8 @@ const Profile = () => {
   const { users } = useSelector((state) => state.data);
 
   let navigate = useNavigate();
- 
- 
-  //handle Submit
 
+  
 
   useEffect(() => {
     dispatch(oneUser(id));
@@ -42,10 +37,15 @@ const Profile = () => {
           ></img>
           <img className="img2" src={users.profile} />
         </div>
+        <h2>Personal Info</h2>
         <h4 className="textSyle"> {users.name}</h4>
+        <label>Info:</label>
+        <h5> {users.descP}</h5>
+        <h5>Date Of Birth:{users.DOF}</h5>
+        <h5>Native:{users.Native}</h5>
+        <h5>Hobbies:{users.interest}</h5>
 
-
-
+        <Friend />
         {/* Card */}
         <div className="CenterAlign">
           <div className="ui card" key={users.id}>
@@ -74,7 +74,6 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <Friend />
       </div>
     </div>
   );

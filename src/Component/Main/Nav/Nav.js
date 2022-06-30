@@ -1,12 +1,22 @@
 import React from "react";
-import {Menu, Search, Person, Notifications, Message } from "@material-ui/icons";
-import {Link}from '@mui/material';
+import {
+  Menu,
+  Search,
+  Person,
+  Notifications,
+  Message,
+} from "@material-ui/icons";
+import { Link } from "@mui/material";
 import "./nav.css";
+
+
 function Nav() {
   return (
     <div className="NavBarContainer">
       <div className="NavBarSide">
-      <Link href='/setting'><Menu className="Icon"/></Link>
+        <Link href="/setting">
+          <Menu className="Icon" />
+        </Link>
         <span className="logo">Sumithra App</span>
       </div>
       <div className="NavBarCenter">
@@ -17,7 +27,9 @@ function Nav() {
       </div>
       <div className="NavBarLeft">
         <div className="NavBarLink">
-          <span className="NavbarLink"><Link  href="/page">Home</Link></span>
+          <span className="NavbarLink">
+            <Link href="/page">Home</Link>
+          </span>
         </div>
         <div className="NavBarItemList">
           <div className="NavBarIcon">
@@ -33,7 +45,11 @@ function Nav() {
             <span className="NavBarItem">3</span>
           </div>
         </div>
-        <img src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg" alt="Profile" className="NavBarImage"/>
+        <img
+          src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg"
+          alt="Profile"
+          className="NavBarImage"
+        />
       </div>
     </div>
   );

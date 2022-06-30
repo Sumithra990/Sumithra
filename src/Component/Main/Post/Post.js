@@ -15,11 +15,13 @@ function Post() {
   //setInput value State
   
  const [desc,setDesc]=useState("");
- const [img,setImage]=useState();
- const [video,setVideo]=useState();
+ const [img,setImage]=useState(null);
+ const [video,setVideo]=useState(null);
+
 
 //handle Submit
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     dispatch(addUserPost({desc,img,video}));
     navigate("/page");
   };
@@ -96,18 +98,7 @@ function Post() {
               </span>
             </div>
           </div>
-        {/* <input type="file" onChange={(e)=>{
-           setImage(URL.createObjectURL(e.target.files[0]))
-           
-        }}/>
-
-        <img src={img} style={{height:300, width:300}}/>
-        <button onClick={()=>{
-          axios.post("http://localhost:5000/Posts/",{img})
-          .then(res=>{
-            console.log(res);
-          })
-        }}>upload</button> */}
+      
     </div>
   );
 }

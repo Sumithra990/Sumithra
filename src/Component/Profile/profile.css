@@ -1,42 +1,41 @@
-.profile-container{
-    padding-top: 20px;
-    align-items: center;
-    justify-content: center;
+.profile-container {
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
-.img1{
- width:100%;
- height:400px;
- padding-right: 120px;
- /* padding-left: 120px; */
- position: absolute;
- /* border-radius:5%; */
+.img1 {
+  width: 100%;
+  height: 400px;
+  padding-right: 120px;
+  /* padding-left: 120px; */
+  position: absolute;
+  /* border-radius:5%; */
 }
-.img2{
-  width:26%;
-  border-radius:50% 50%;
-  position:relative;
+.img2 {
+  width: 26%;
+  border-radius: 50% 50%;
+  position: relative;
   top: 105px;
   left: 400px;
 }
-.container{
-    padding-bottom: 20%;
-
+.container {
+  padding-bottom: 10%;
 }
-.CenterAlign{
-    display: flex;
-    padding-top: 20px;
-    align-items: center;
-    justify-content: center;
+.CenterAlign {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
-.textSyle{
-    padding-top: 10px;
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h2,
+.textSyle {
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

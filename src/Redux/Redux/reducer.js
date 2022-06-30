@@ -1,10 +1,14 @@
 import { type } from "@testing-library/user-event/dist/type";
 import * as types from "./actionType";
+
+//load initial state
 const initialState = {
   users: [],
   user: {},
   lodding: true,
 };
+
+//Condition part
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.GET_USER:
