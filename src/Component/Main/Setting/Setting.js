@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Friend from '../../Profile/Friend/Friend'
 import './Setting.css'
 
 import {Feedback,Chat,Group,Bookmark,VideoCall,QuestionAnswer,Work,Event,Class}from '@material-ui/icons'
@@ -6,6 +7,7 @@ export default function Setting() {
   return (
     <div className='SettingContainer'>
       <div className="SettingCollection">
+        <h1>Settings</h1>
         <ul className="SettingList">
           <li className="SettingListType">
             <Feedback className="SettingIcon"/>
@@ -48,7 +50,7 @@ export default function Setting() {
       <hr className='SettingHr'/>
       <ul className='Icon'>
         <li className="">
-
+           <Friend/>
         </li>
       </ul>
       </div>

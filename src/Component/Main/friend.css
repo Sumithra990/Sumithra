@@ -1,5 +1,8 @@
 .friends {
-  padding-top: 12px;
-  float: right;
+  flex: 3.5;
+  float: left;
   padding-right: 5%;
+}
+.Text{
+  color:black;
 }

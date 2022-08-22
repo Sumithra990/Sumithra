@@ -1,42 +1,78 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadFriend } from "../../Redux/Redux/Friend/friendAction"
-import './friend.css';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
+import { loadFriend } from "../../Redux/Redux/Friend/friendAction";
+import "./friend.css";
+import { styled } from "@mui/material/styles";
+import Badge from "@mui/material/Badge";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
 
 function FriendList() {
-    const dispatch = useDispatch();
-    const { friends } = useSelector((state) => state.friend);
-    useEffect(() => {
-      dispatch(loadFriend());
-    }, []);
+  const dispatch = useDispatch();
+  const { friends } = useSelector((state) => state.friend);
+  useEffect(() => {
+    dispatch(loadFriend());
+  }, []);
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      backgroundColor: "#44b700",
+      color: "#44b700",
+      boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+      "&::after": {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        borderRadius: "50%",
+        animation: "ripple 1.2s infinite ease-in-out",
+        border: "1px solid currentColor",
+        content: '""',
+      },
+    },
+    "@keyframes ripple": {
+      "0%": {
+        transform: "scale(.8)",
+        opacity: 1,
+      },
+      "100%": {
+        transform: "scale(2.4)",
+        opacity: 0,
+      },
+    },
+  }));
+
+
   return (
     <div className="friends">
-        <h3>FriendList</h3>
-    {friends.map((friend) => (
-<List
-sx={{
-  width: '100%',
-  maxWidth: 360,
-  bgcolor: 'background.paper',
-}}
->
-
-<ListItem key={friend.id}>
-   
-  <ListItemAvatar>
-  <Avatar alt="Remy Sharp" src={friend.profilePicture}  />
-  </ListItemAvatar>
-  <ListItemText primary={friend.username} />
-</ListItem>
-</List>
-    ))}
+      <h3>Online Friends</h3>
+      {friends.map((friend) => (
+        <List
+          sx={{
+            width: "100%",
+            maxWidth: 360,
+            bgcolor: "background.paper",
+          }}
+        >
+          <ListItem key={friend.id}>
+            <ListItemAvatar>
+              <StyledBadge
+                overlap="circular"
+                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+                variant="dot"
+              >
+                <Avatar alt="Remy Sharp" src={friend.profilePicture} />
+              </StyledBadge>
+            </ListItemAvatar>
+            <ListItemText primary={friend.username} />
+          </ListItem>
+        </List>
+      ))}
     </div>
-  )
+  );
 }
 
-export default FriendList
+export default FriendList;

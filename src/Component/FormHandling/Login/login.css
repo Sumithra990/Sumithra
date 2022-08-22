@@ -26,9 +26,10 @@ label{
    display: flex;
    align-items: 'center';
    flex-direction:wrap;
-   margin-left: 120px;
+   margin-left: 100px;
 }
-h3{
+h5{
+    padding-top: 13px;
     text-align: center;
     font-family:sans-serif
 }

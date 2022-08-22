@@ -1,5 +1,13 @@
 import React from "react";
-import { TextField, Box, Typography, Link, Button, Paper } from "@mui/material";
+import {
+  TextField,
+  Box,
+  Typography,
+  Link,
+  Button,
+  Paper,
+  Avatar,
+} from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import {
   MailOutlined,
@@ -28,7 +36,7 @@ export default function Login() {
       const psw = localStorage.getItem("Password");
       if (formik.values.Email === email && formik.values.Password === psw) {
         alert("Login Successfully");
-        navigate("/page");
+        navigate("/home");
       } else {
         alert("Enter Valid userName and Password");
       }
@@ -52,13 +60,14 @@ export default function Login() {
             borderRadius: 5,
           }}
         >
-          <AccountCircleRounded
-            sx={{ fontSize: 40 }}
+          <Avatar
+            alt="Sumithra Rajendran"
             className="icon2"
-            color="secondary"
-            size="large"
+            src="/Assert/Profile/1.jpg"
+            sx={{ width: 50, height: 50 }}
           />
-          <h3>LOGIN HERE</h3>
+
+          <h5>Sumithra Rajendran</h5>
           <TextField
             InputProps={{
               startAdornment: (
@@ -72,9 +81,8 @@ export default function Login() {
             fullWidth
             name="Email"
             label={
-              <Typography variant="headline" component="h3">
-                {" "}
-                Email{" "}
+              <Typography variant="headline" component="h5">
+                {"Email"}
               </Typography>
             }
             type="email"
@@ -93,8 +101,8 @@ export default function Login() {
             variant="outlined"
             name="Password"
             label={
-              <Typography variant="headline" component="h3">
-                Password{" "}
+              <Typography variant="headline" component="h5">
+                {"Password"}
               </Typography>
             }
             type="password"
@@ -113,8 +121,8 @@ export default function Login() {
               onClick={formik.handleSubmit}
             >
               {
-                <Typography variant="body" component="h4">
-                  Submit
+                <Typography variant="body" component="h5">
+                  {"Submit"}
                 </Typography>
               }
             </Button>

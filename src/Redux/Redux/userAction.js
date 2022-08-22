@@ -27,7 +27,7 @@ const addPost = () => ({
 export const loadUser = () => {
   return function (dispatch) {
     axios
-      .get("http://localhost:5000/posts")
+      .get("http://localhost:5000/Posts")
       .then((res) => {
         dispatch(getUsers(res.data));
       })
@@ -39,7 +39,7 @@ export const loadUser = () => {
 export const postData = () => {
   return function (dispatch) {
     axios
-      .post("http://localhost:5000/posts")
+      .post("http://localhost:5000/Posts")
       .then((res) => {
         dispatch(getUsers(res.data));
       })
@@ -53,7 +53,7 @@ export const oneUser = (id) => {
   return function (dispatch) {
     // console.log(process)
     axios
-      .get(`http://localhost:5000/posts/${id}`)
+      .get(`http://localhost:5000/Posts/${id}`)
       .then((res) => {
         dispatch(getOneUsers(res.data));
       })
@@ -63,7 +63,7 @@ export const oneUser = (id) => {
 export const addUserPost = (user) => {
   return function (dispatch) {
     axios
-      .post(`http://localhost:5000/posts`, user)
+      .post(`http://localhost:5000/Posts`, user)
       .then((res) => {
         dispatch(addPost());
         dispatch(loadUser());
@@ -76,7 +76,7 @@ export const addUserPost = (user) => {
 export const deleteUser = (id) => {
   return function (dispatch) {
     axios
-      .delete(`http://localhost:5000/posts/${id}`)
+      .delete(`http://localhost:5000/Posts/${id}`)
       .then((res) => {
         dispatch(deleteUsers());
         dispatch(loadUser());

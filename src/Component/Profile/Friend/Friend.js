@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import SearchBar from './search'
+import {ListItemAvatar,Avatar, ListItemText,ListItem,List }from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { loadFriend } from "../../../Redux/Redux/Friend/friendAction";
 import "./friend.css";
-
+import "../../Main/Nav/nav.css";
 const Friend = () => {
   //get Redux values
   const dispatch = useDispatch();
@@ -12,17 +14,23 @@ const Friend = () => {
   }, []);
 
   return (
-    <div>
+    <div className="Text">
       <h3>Friends List</h3>
-      <div className="friend_container">
+      <div className="friends">
         {friends.map((friend) => (
-          <div className="card" key={friend.id}>
-            <img src={friend.profilePicture} className="imageIcon" />
-            <div className="content">
-              <h4>{friend.username}</h4>
-            </div>
-          </div>
+          <List>
+            <ListItem key={friend.id}>
+              <ListItemAvatar>
+                <Avatar alt="Remy Sharp" src={friend.profilePicture} />
+              </ListItemAvatar>
+              <ListItemText  primary={friend.username} />
+            </ListItem>
+          </List>
         ))}
+      
+       <div className="NavBarCenter">
+      <SearchBar/>
+      </div>
       </div>
     </div>
   );

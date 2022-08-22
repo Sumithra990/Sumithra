@@ -1,11 +1,11 @@
 import React from "react";
 import {
   Menu,
-  Search,
   Person,
   Notifications,
   Message,
 } from "@material-ui/icons";
+
 import { Link } from "@mui/material";
 import "./nav.css";
 
@@ -18,12 +18,6 @@ function Nav() {
           <Menu className="Icon" />
         </Link>
         <span className="logo">Sumithra App</span>
-      </div>
-      <div className="NavBarCenter">
-        <div className="SearchBar">
-          <Search className="navBarSearch" />
-          <input placeholder="Enter Your photos and video" className="Input" />
-        </div>
       </div>
       <div className="NavBarLeft">
         <div className="NavBarLink">
@@ -46,7 +40,7 @@ function Nav() {
           </div>
         </div>
         <img
-          src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg"
+          src="/Assert/Profile/1.jpg"
           alt="Profile"
           className="NavBarImage"
         />

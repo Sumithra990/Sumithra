@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import {} from "../../../";
 import "./post.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addUserPost } from "../../../Redux/Redux/userAction";
 import { useNavigate} from "react-router-dom";
-import axios from "axios";
+
 function Post() {
   //using redux for dispach
   const dispatch = useDispatch();
@@ -15,22 +15,22 @@ function Post() {
   //setInput value State
   
  const [desc,setDesc]=useState("");
- const [img,setImage]=useState(null);
+ const [photo,setPhoto]=useState(null);
  const [video,setVideo]=useState(null);
 
 
 //handle Submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addUserPost({desc,img,video}));
-    navigate("/page");
+    dispatch(addUserPost({desc,photo,video}));
+    navigate("/home");
   };
 
   //Handle change Image
 
   const handleChangeImage=(e)=>{
      let image=e.currentTarget.files[0];
-    setImage(URL.createObjectURL(image))
+    setPhoto(URL.createObjectURL(image))
   }
   //handle video Change
   const handleChangeVideo=(e)=>{
@@ -56,8 +56,8 @@ function Post() {
           <div className="ui card" >
             <div className="content">
               <div className="right floated meta"></div>
-              <img className="ui avatar img" src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg" />
-               Guest User
+              <img className="ui avatar img" src="Assert/Profile/1.jpg" alt="hello" />
+               Sumithra Rajendran
             </div>
             <div className="ui input focus">
               <input
@@ -69,7 +69,7 @@ function Post() {
               />
             </div>
             <div className="image">
-                <img src={img} />
+                <img src={photo} alt="hello" />
               </div>
             <div className="content">
               <span className="left floated">

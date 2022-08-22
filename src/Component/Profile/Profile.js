@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteUser, oneUser, addUserPost } from "../../Redux/Redux/userAction";
+import { deleteUser, oneUser} from "../../Redux/Redux/userAction";
+import { loadFriend } from "../../Redux/Redux/Friend/friendAction";
 import { useParams } from "react-router-dom";
 import { MoreVert } from "@material-ui/icons";
 import { useNavigate } from "react-router-dom";
@@ -9,16 +10,18 @@ import "./profile.css";
 
 const Profile = () => {
   //Dispatch
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   let { id } = useParams();
+  const { friends } = useSelector((state) => state.friend);
   const { users } = useSelector((state) => state.data);
 
-  let navigate = useNavigate();
 
   
-
+  console.log(users,friends)
   useEffect(() => {
     dispatch(oneUser(id));
+    dispatch(loadFriend())
   }, []);
 
   const handleDelete = (id) => {
@@ -27,25 +30,26 @@ const Profile = () => {
     }
   };
   return (
+
+    
     <div className="profile-container">
       <div className="ui container" key={users.id}>
         <div className="container">
           <img
-            src={users.backImage}
+            src="https://cdn.wallpapersafari.com/84/35/l85BYI.jpg"
             className="img1"
             alt="Responsive image"
           ></img>
-          <img className="img2" src={users.profile} />
+          <img className="img2" src={users.profilePicture} />
         </div>
-        <h2>Personal Info</h2>
-        <h4 className="textSyle"> {users.name}</h4>
-        <label>Info:</label>
-        <h5> {users.descP}</h5>
-        <h5>Date Of Birth:{users.DOF}</h5>
+        <h4 className="textSyle">Deepa sathish</h4>
+        <label>Personal Info:</label>
+        <h5> {users.desc}</h5>
+        <h5>Date Of Birth:{users.DOF}</h5>  
         <h5>Native:{users.Native}</h5>
-        <h5>Hobbies:{users.interest}</h5>
+        <h5>Status:{users.Status}</h5>
 
-        <Friend />
+       
         {/* Card */}
         <div className="CenterAlign">
           <div className="ui card" key={users.id}>
@@ -53,8 +57,8 @@ const Profile = () => {
               <div className="right floated meta">
                 <MoreVert onClick={() => handleDelete(users.id)} />
               </div>
-              <img className="ui avatar image" src={users.profile} />
-              {users.name}
+              <img className="ui avatar image" src={users.profilePicture} />
+              Deepa sathish
             </div>
             <div className="content">
               <div className="meta">
@@ -62,7 +66,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="image">
-              <img src={users.img} />
+              <img src="https://video.cgtn.com/news/77416a4e7a67544e786b544f344d444e304d7a4e31457a6333566d54/video/ca413729bcf64502ab923c080b9d0920/ca413729bcf64502ab923c080b9d0920.jpg" />
             </div>
             <div className="content">
               <span className="right floated">
